@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "A website for testing",
+    "tagline": "Meta Description",
     "docs": {
       "doc1": {
         "title": "Latin-ish",
@@ -23,9 +23,9 @@
       }
     },
     "links": {
-      "Docs": "Docs",
-      "API": "API",
-      "Help": "Help",
+      "Slides": "Slides",
+      "Videos": "Videos",
+      "Challenges": "Challenges",
       "Blog": "Blog"
     },
     "categories": {

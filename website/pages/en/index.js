@@ -58,8 +58,8 @@ const Logo = props => (
 
 const ProjectTitle = props => (
   <h2 className="projectTitle">
-    {siteConfig.title}
-    <small>{siteConfig.tagline}</small>
+    {siteConfig.title_display}
+    <small>{siteConfig.tagline_display}</small>
   </h2>
 );
 
@@ -76,13 +76,15 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('docusaurus.svg')} />
+        <Logo img_src={imgUrl('LR-white@2x.png')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
             <Button href={docUrl('doc1.html', language)}>Example Link</Button>
             <Button href={docUrl('doc2.html', language)}>Example Link 2</Button>
+          </PromoSection>
+          <PromoSection>
+            <a href="#learn-more-scroll" className="button learn-more-home">Learn More About The Basics</a>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -182,18 +184,41 @@ const Showcase = props => {
       );
     });
 
-  return (
-    <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's Using This?"}</h2>
-      <p>This project is used by all these people</p>
-      <div className="logos">{showcase}</div>
-      <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title} Users
-        </a>
-      </div>
-    </div>
-  );
+      return (
+        <div className="productShowcaseSection paddingBottom">
+          <h2>Built with ❤️</h2>
+          <p>This course is was built using a collection of online tools designed to make coding easier for beginners.</p>
+          <div className="logos">{showcase}</div>
+          <div className="more-users logo-message">
+           <a className="button" href={pageUrl('users.html')}>
+              Special Thanks
+            </a> 
+          </div>
+        
+          <div className="testimonials">
+            <Container padding={['bottom', 'top']}>
+              <GridBlock
+                align="center"
+                contents={[
+                  {
+                    content:
+                      "*\"I personally believe that anyone who wants to learn coding should have access to the resources available to do so. Computer science and the economic opportunities it affords are crucial in today's economy, and introducing more young women and P.O.C to coding is a lifelong passion of mine.\"*",
+                    image: `https://s3.amazonaws.com/media-p.slid.es/uploads/1075364/images/6495706/IMG_0433.JPG.jpg`,
+                    imageAlign: 'top',
+                    imageAlt: 'Lennyroy Robles',
+                    title:
+                      'Lennyroy Robles <br/><font size="2">Instructor</font>',
+                  },
+                ]}
+                layout="threeColumn"
+              />
+            </Container>
+          </div>
+
+
+
+        </div>
+      );
 };
 
 class Index extends React.Component {

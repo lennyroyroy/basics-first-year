@@ -10,16 +10,18 @@ const React = require('react');
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
-    return baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+    const docsUrl = this.props.config.docsUrl;
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
+    const langPart = `${language ? `${language}/` : ''}`;
+    return `${baseUrl}${docsPart}${langPart}${doc}`;
   }
 
   pageUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
-    return baseUrl + (language ? language + '/' : '') + doc;
+    return baseUrl + (language ? `${language}/` : '') + doc;
   }
 
   render() {
-    const currentYear = new Date().getFullYear();
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
@@ -34,63 +36,51 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
-            </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
-            </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
-            </a>
+            <h5>Lennyroy Codes</h5>
+            <a href="https://github.com/lennyroyroy/the-basics">GitHub</a>
           </div>
           <div>
-            <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
+            <h5>Features</h5>
+            <a href="https://github.com/lennyroyroy/the-basics">GitHub</a>
+          </div>
+          <div>
+            <h5>Learn More</h5>
             <a
-              href="http://stackoverflow.com/questions/tagged/"
-              target="_blank">
-              Stack Overflow
-            </a>
-            <a href="https://discordapp.com/">Project Chat</a>
-            <a href="https://twitter.com/" target="_blank">
+              href="https://twitter.com/lennyroyroy"
+              target="_blank"
+              rel="noreferrer noopener">
               Twitter
             </a>
-          </div>
-          <div>
-            <h5>More</h5>
-            <a href={this.props.config.baseUrl + 'blog'}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
+            <a
+              href="https://www.linkedin.com/in/lennyroyrobles/"
+              target="_blank"
+              rel="noreferrer noopener">
+              LinkedIn
+            </a>
+            <a
+              href="https://lennyroyroy.github.io/personal-website/"
+              target="_blank"
+              rel="noreferrer noopener">
+              Portfolio
+            </a>
             <a
               className="github-button"
               href={this.props.config.repoUrl}
               data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
-              data-show-count={true}
+              data-size="large"
+              data-show-count="true"
               data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
+              aria-label="Star lennyroyroy/the-basics on GitHub">
               Star
             </a>
+            <div>
+            <style dangerouslySetInnerHTML={{__html: ".bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#5c194d !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 0px 9px !important;font-size: 14px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}" }} /><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" /><a className="bmc-button" target="_blank" href="https://www.buymeacoffee.com/t9FNaoyvY"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" alt="Buy me a coffee!" /><span style={{marginLeft: '5px'}}>Buy me a coffee!</span></a>
+            </div>
           </div>
         </section>
 
-        <a
-          href="https://code.facebook.com/projects/"
-          target="_blank"
-          className="fbOpenSource">
-          <img
-            src={this.props.config.baseUrl + 'img/oss_logo.png'}
-            alt="Facebook Open Source"
-            width="170"
-            height="45"
-          />
-        </a>
-        <section className="copyright">
-          Copyright &copy; {currentYear} Facebook Inc.
-        </section>
+
+        <section className="copyright">{this.props.config.copyright}</section>
       </footer>
     );
   }

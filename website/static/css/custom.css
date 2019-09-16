@@ -1,4 +1,572 @@
-/* your custom css */
+/*##################################################
+#                                                  #
+#                                                  #
+#          Global Styles                           #            
+#                                                  #
+#                                                  #
+###################################################*/
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+	background-color: #f5f6fa;
+}
+
+
+
+
+
+/*##################################################
+#                                                  #
+#                                                  #
+#          Header Styles                           #            
+#                                                  #
+#                                                  #
+###################################################*/
+
+.homeContainer{
+	background-color: #1E272F;
+}
+
+.homeContainer, .homeContainer a, .homeContainer h2 {
+	color: white !important;
+}
+
+.fixedHeaderContainer header img{
+  width: auto;
+  height:45px;
+  opacity:.8;
+}
+
+.fixedHeaderContainer header img:hover{
+  opacity: 1;
+  transition: 600ms;
+}
+
+.fixedHeaderContainer header .headerTitleWithLogo{
+  display: none;
+}
+
+.room{
+	margin-top:80px;
+}
+
+audio{
+	width: 100%;
+}
+
+.homeContainer{
+  	color:white !important;
+  	padding-bottom:50px;
+  	padding-top: 50px;
+}
+
+
+.homeContainer a{
+  	border:solid white 1px;
+  	font-size:15px;
+}
+.sidebyside a{
+    margin-right: 10px;
+}
+
+.sidebyside2 {
+    display: flex;
+  	justify-content: center;
+}
+
+/*##################################################
+#                                                  #
+#                                                  #
+#          Homepage Card Styles                    #            
+#                                                  #
+#                                                  #
+###################################################*/
+
+.card-box{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	border:solid black 3px;
+	height: 600px;
+	overflow-x:hidden;
+}
+
+.paddingBottom:nth-of-type(2){
+  padding-bottom: 100px !important;
+}
+
+
+
+
+/*##################################################
+#                                                  #
+#                                                  #
+#          Testimonial Styles                      #            
+#                                                  #
+#                                                  #
+###################################################*/
+
+
+.imageAlignTop.alignCenter .blockImage{
+  	min-width:150px;
+}
+.testimonials .imageAlignTop.alignCenter .blockImage{
+ 	max-width: 340px !important;
+}
+.testimonials img{
+  	border:solid #5C194D 2px;
+  	max-width: 340px !important;
+  	border-radius: 10px;
+}
+.productShowcaseSection.paddingBottom{
+  	padding-bottom: 0px;
+}
+.logos img{
+   border:solid #5C194D .05rem;
+   border-radius: 10px;
+   margin-right: 10px;
+   background-color: #f8f8ff;
+   height: 50px;
+   width: 50px !important;
+   padding:10px !important;
+   opacity: 0.6;
+}
+.logos img:hover{
+  opacity: 1;
+  transition: 600ms;
+}
+.testimonials  .paddingBottom{
+  padding-top: 10px !important;
+  margin-top: 0px !important;
+}
+
+
+/*##################################################
+#                                                  #
+#                                                  #
+#          Video Styles                            #            
+#                                                  #
+#                                                  #
+###################################################*/
+.video-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.video-container div{
+  min-width: 50%;
+  margin-right: 10px;
+}
+
+.video-container p{
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 90.25%;
+    border:solid #5C194D 10px;
+    margin-top:30px;
+    margin-bottom:15px;
+}
+.iframe-container iframe {
+  	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.iframe-section hr{
+  	margin-top: 75px;
+  	margin-bottom: 75px;
+}
+.iframe-button{
+	margin-bottom:40px;
+}
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+/*##################################################
+#                                                  #
+#                                                  #
+#          Footer Styles.                          #            
+#                                                  #
+#                                                  #
+###################################################*/
+
+
+
+.copyright{
+  font-size: .6rem;
+}
+/*##################################################
+#                                                  #
+#                                                  #
+#          Inner Page Styles                       #            
+#                                                  #
+#                                                  #
+###################################################*/
+.inner-section{
+  margin-bottom:50px;
+}
+.inner-section:not(:first-of-type){
+  border-top:solid #5C194D 10px;
+}
+.inner-section .button{
+  margin-top:10px;
+}
+.intro-container{
+  display: flex;
+}
+.intro-text{
+  padding-right:10px;
+}
+.intro-container img{
+  border:solid #5B1A4C 4px;
+  border-radius: 10px;
+}
+.purpose p{
+  border:solid #5B1A4C 1px;
+  padding:10px;
+  border-radius: 10px;
+}
+.intro-images img{
+  margin-top:40px;
+  max-width: 60%;
+  margin-left: 0px;
+}
+.slide-deck-gallery{
+  display: flex !important;
+}
+.slide-deck-gallery img{
+  max-width: 360px;
+  margin-right: 25px;
+  margin-top:10px;
+  opacity:0.85;
+}
+.slide-deck-gallery img:hover{
+  opacity:1;
+  transition: 600ms;
+  cursor:pointer;
+}
+.slide-deck-gallery span{
+  font-size:1.3rem;
+}
+.slide-main{
+  display:flex;
+  flex-direction: row;
+}
+.slide-main img{
+  border:solid 1px #5B1A4C;
+  min-width: 250px;
+}
+.slide-main h2{
+  font-size:16px !important;
+}
+
+
+
+.pdf-button{
+  background-color: transparent;
+  color: black;
+}
+
+
+.pdf-button:hover{
+  background-color: #453841;
+  color: white;
+}
+
+
+
+.live-button{
+  background-color: #43353F;
+  color: white;
+  text-transform: capitalize;
+}
+.learn-more-home{
+  color:#5C194D !important;
+  display: none;
+}
+.catalog:hover{
+  background-color:white !important;
+  color:#1E272F !important;
+}
+.learn-more-home:hover{
+  background-color:white !important;
+  color:#1E272F !important;
+}
+
+
+
+.inner-page-image{
+  border: solid #FF45D7 5px;
+  max-width: 650px;
+}
+
+
+a:hover{
+	color: #FF4AD5;
+  transition: 200ms;
+}
+
+
+hr:first-of-type{
+	border:solid 5px;
+	border-color: #5C194D;
+	border-radius: 10px;
+	margin:0px;
+}
+
+hr:nth-of-type(2){
+	border:solid 5px;
+	border-color: #5C194D;
+	border-radius: 10px;
+	margin:0px;
+	margin-top: 30px !important;
+}
+
+
+/*##################################################
+#                                                  #
+#                                                  #
+#          Misc                                    #            
+#                                                  #
+#                                                  #
+###################################################*/
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+input {
+    display:none;
+}
+span#content {
+    display:none;
+}
+input#show:checked ~ span#content {
+  display:block;
+  	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	border:solid black 3px;
+	height: 600px;
+	overflow-x:hidden;
+}
+input#hide:checked ~ span#content {
+    display:none;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+#content img{
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+/*##################################################
+#                                                  #
+#                                                  #
+#          Buy Me Coffee Styles                    #            
+#                                                  #
+#                                                  #
+###################################################*/
+.bmc-button img{
+    width: 27px !important;
+    margin-bottom: 1px !important;
+    box-shadow: none !important;
+    border: none !important;
+    vertical-align: middle !important;
+}
+.bmc-button{
+    line-height: 36px !important;
+    height:37px !important;
+    text-decoration: none !important;
+    display:inline-flex !important;
+    color:#ffffff !important;
+    background-color:#BB5794 !important;
+    border-radius: 3px !important;
+    border: 1px solid transparent !important;
+    padding: 0px 9px !important;
+    font-size: 17px !important;
+    letter-spacing:-0.08px !important;
+    box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+    -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    margin: 0 auto !important;
+    font-family:'Lato', sans-serif !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    -o-transition: 0.3s all linear !important;
+    -webkit-transition: 0.3s all linear !important;
+    -moz-transition: 0.3s all linear !important;
+    -ms-transition: 0.3s all linear !important;
+    transition: 0.3s all linear !important;
+}
+.bmc-button:hover, .bmc-button:active, .bmc-button:focus {
+    -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    text-decoration: none !important;
+    box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    opacity: 0.85 !important;
+    color:#ffffff !important;
+}
+
+/*##################################################
+#                                                  #
+#                                                  #
+#          Breakpoints & Media Queries             #            
+#                                                  #
+#                                                  #
+###################################################*/
+@media only screen and (max-width: 1170px) {
+	.slide-deck-gallery{
+	flex-direction: column;
+	}
+	.slide-deck-gallery img{
+	max-width:100%;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.learn-more-home{
+		display: inline-block;
+	}
+	.testimonials  .paddingBottom{
+		padding-top: 30px !important;
+		margin-top: 0px !important;
+	}
+	.intro-images img{
+		max-width: 100%;
+		margin-right: auto;
+	}
+	.homeContainer a{
+		font-size: .75rem;
+		padding: 10px 6px;
+	}
+
+	.fixedHeaderContainer header img{
+		opacity:.95;
+	}
+	.blockContent h2{
+		text-align: center !important;
+	}
+	.fixedHeaderContainer header {
+		margin-left: -10px !important;
+	}
+	footer h5{
+		font-size: 1.2rem;
+	}
+	footer a{
+		font-size: 1.05rem;
+	}  
+	.productShowcaseSection .logos{
+		padding-top: 0px;
+	}
+	.logos img{
+		display: none;
+	}
+	.logo-message{
+		display: block;
+	}
+	.imageAlignTop.alignCenter .blockImage img:last-of-type{
+		max-width: 150px;
+		width: 200px;
+	}
+	.homeContainer{
+		padding-bottom: 240px;
+	}
+	.slide-main{
+		flex-direction: column;
+	}
+	.slide-row{
+		margin-right:10px;
+	}
+	.video-container{
+		display: flex;
+		flex-direction: column;
+	}
+	.video-container div{
+		margin-right: 0px;
+		margin-top: 20px;
+	}
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+	hr:first-of-type{
+		margin:0px;
+	}
+}
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
